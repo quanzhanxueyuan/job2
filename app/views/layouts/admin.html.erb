@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Job Listing </title>
+        <title>招聘网站 </title>
         <%= csrf_meta_tags %>
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -16,8 +16,8 @@
             <div class="row">
               <div class="col-md-2">
                 <ul class="nav nav-pills nav-stacked" style="max-width: 300px; padding-top:20px;">
-                 <li class="active"><%= link_to("Jobs", admin_jobs_path ) %> </li>
-                  
+                 <li class="active"><%= link_to("管理后台", admin_jobs_path ) %> </li>
+                  <li class="active"><%= link_to("返回首页", jobs_path )%> </li>
                 </ul>
               </div>
 
