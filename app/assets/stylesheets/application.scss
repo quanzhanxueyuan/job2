@@ -212,3 +212,11 @@ body{
    font-size: 20px;
    text-align: center;
  }
+
+ thead {
+ color: #795548;
+ background-color: #18FFFF;
+ }
+
+ tbody tr{background: #FFF59D;}	
+ tbody tr:nth-child(even){background: #B388FF;}
