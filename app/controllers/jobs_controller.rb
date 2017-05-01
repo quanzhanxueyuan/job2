@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   before_action :validate_search_key, only: [:search]
-  
+
   def show
     @job = Job.find(params[:id])
 
@@ -18,7 +18,7 @@ class JobsController < ApplicationController
     when 'by_upper_bound'
       Job.published.order('wage_upper_bound DESC')
     else
-      Job.published.recent
+      Job.published.recent.paginate(:page => params[:page], :per_page => 10)
     end
   end
 
